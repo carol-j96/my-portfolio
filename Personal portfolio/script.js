@@ -24,8 +24,8 @@ sections.forEach(section => {
     sectionObserver.observe(section);
 });
 const photos = [
-    { src: 'images/photo1.jpg', alt: 'Photo 1' },
-    { src: 'images/photo2.jpg', alt: 'Photo 2' },
+    { src: 'images/photo1.jpeg', alt: 'Photo 1' },
+    { src: 'images/photo2.jpeg', alt: 'Photo 2' },
 ];
 const grid = document.getElementBtId('galleryGrid');
 photos.forEach(photo => {
