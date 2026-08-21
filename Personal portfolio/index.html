@@ -4,13 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio</title>
+    <title>Caroline Joyce Waithira | Software Developer Portfolio</title>
+
+    <meta name="description" content="Portfolio of Caroline Joyce Waithira, a dedicated Computer Technology student and aspiring software developer specializing in web applications and data-base driven system.">
+    <meta name="author" content="Caroline Joyce Waithira">
+
+    <meta property="og:title" content="Caroline Joyce Waithira | Software Developer Portfolio">
+    <meta property="og: description" content="Aspiring Software developer building efficient, user friendly applications. Explore my projects, skills, education and contact information.">
+    <meta property="og: image" content="images/profile.jpeg">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" sizes="32*32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16*16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" href="images/favicon-48.png">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div id="progressBar"></div>
+
     <header>
         <nav>
             <div class="nav-brand">
@@ -19,13 +34,25 @@
             </div>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </nav>
     </header>
+
+    <section class="hero">
+        <h2>Aspiring Software Developer</h2>
+        <p>Building efficient, user-focused applications - from database-drivensystems to clean, responsive web interfaces</p>
+        <a href="resume.pdf" download class="btn-primary">
+            <i class="fa-solid fa-download"></i> Download CV
+        </a>
+    </section>
 
     <main>
         <section id="about">
@@ -33,6 +60,20 @@
             <p>
                 Hello! I am a dedicated student pursuing Computer Technology heading to my final year in college. I am passionate about software development, creating efficient and user-friendly applications and solutions for software challenges.
             </p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
+                <span class="skill-badge"><i class="fa-solid fa-database"></i> MySQL</span>
+                <span class="skill-badge"><i class="fa-solis fa-diagram-project"></i> System Design</span>
+                <span class="skill-badge"><i class="fa-brands fa-git-alt"></i> GitHub</span>
+                <span class="skill-badge"><i class="fa-solid fa-network-wired"></i> Computer Networks</span>
+            </div>
         </section>
 
         <section id="education">
