@@ -10,7 +10,7 @@ const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
 };
-const observer = new IntersectionObserver((entries) => {
+const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
@@ -27,7 +27,7 @@ const photos = [
     { src: 'images/photo1.jpeg', alt: 'Photo 1' },
     { src: 'images/photo2.jpeg', alt: 'Photo 2' },
 ];
-const grid = document.getElementBtId('galleryGrid');
+const grid = document.getElementById('galleryGrid');
 photos.forEach(photo => {
     const item = document.createElement('div');
     item.className = 'gallery-item';

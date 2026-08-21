@@ -1,75 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<h>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css">
-    </head>
+</head>
 
-    <body>
-        <header>
-            <nav>
-                <h1>Caroline Joyce</h1>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>
-                    Hello! I am a dedicated student pursuing Computer Technology heading to my final year in college. I am passionate about software development, creating efficient and user-friendly applications and solutions for challenges.
-                </p>
-            </section>
-
-            <section id="education">
-                <h2>Education & Academics</h2>
-                <div class="education">
-                    <h3>Bachelor of Science in Computer Technology</h3>
-                    <p><strong>Multimedia University of Kenya</strong>| Expected Graduation: 2027</p>
-                    <ul>
-                        <li><strong>Relevant Coursework:</strong> Object-Oriented Programming, Data Strucure and Algorithm, Database Management System, Internet Application Programming, Computer Networks, Software Engineering, Simulation and Modelling, Automata
-                            Theory.
-                        </li>
-                        <li><strong>Academic Focus:</strong> Developing skills in software development, web technologies, database design, system analysis and design, and problem-solving through practical programming projects.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="projects">
-                <h2>Technical Projects</h2>
-                <div class="project">
-                    <h3>Student Attendance Management System</h3>
-                    <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Java, MySQL</p>
-                    <p>
-                        A web-based Student Attendance Management System that enables administrators and lecturers to record, monitor, and manage student attendance efficiently. The system provides secure user authentication, attendance reporting, student record management,
-                        and automated attendance statistics, with all data securely stored in a MySQL relational database.
-                    </p>
-                    <a href="https://github.com/carol-j96/my-portfolio.git" target="_blank">View Source Code</a>
-                </div>
-            </section>
-        </main>
-        <footer id="contact">
-            <h2>Contact Me:</h2>
-            <p>I am currently seeking new opportunities and collaborations.</p>
+<body>
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <img src="images/profile.jpeg" alt="Caroline Joyce Waithira" class="nav-photo">
+                <h1>Caroline Joyce Waithira</h1>
+            </div>
             <ul>
-                <li><a href="mailto:carol96joyce@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
-                <li><a href="https://github.com/carol-j96" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://linkedin.com/in/joyce-caroline-a31374366" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <p>&copy; 2026. All rights received.</p>
-        </footer>
-        <script src="script.js"></script>
+        </nav>
+    </header>
 
-    </body>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am a dedicated student pursuing Computer Technology heading to my final year in college. I am passionate about software development, creating efficient and user-friendly applications and solutions for software challenges.
+            </p>
+        </section>
+
+        <section id="education">
+            <h2>Education & Academics</h2>
+            <div class="education">
+                <h3>Bachelor of Science in Computer Technology</h3>
+                <p><strong>Multimedia University of Kenya</strong>| Expected Graduation: 2027</p>
+                <ul>
+                    <li><strong>Relevant Coursework:</strong> Object-Oriented Programming, Data Strucure and Algorithm, Database Management System, Internet Application Programming, Computer Networks, Software Engineering, Simulation and Modelling, Automata
+                        Theory.
+                    </li>
+                    <li><strong>Academic Focus:</strong> Developing skills in software development, web technologies, database design, system analysis and design, and problem-solving through practical programming projects.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Technical Projects</h2>
+            <div class="project">
+                <h3>Student Attendance Management System</h3>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Java, MySQL</p>
+                <p>
+                    A web-based Student Attendance Management System that enables administrators and lecturers to record, monitor, and manage student attendance efficiently. The system provides secure user authentication, attendance reporting, student record management,
+                    and automated attendance statistics, with all data securely stored in a MySQL relational database.
+                </p>
+                <a href="https://github.com/carol-j96/my-portfolio.git" target="_blank">View Source Code</a>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery" id="galleryGrid"></div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2>Contact Me:</h2>
+        <p>I am currently seeking new opportunities and collaborations.</p>
+        <ul>
+            <li><a href="mailto:carol96joyce@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="https://github.com/carol-j96" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/joyce-caroline-a31374366" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+        <p>&copy; 2026. All rights received.</p>
+    </footer>
+
+    <div id="lightbox">
+        <span class="close">&times;</span>
+        <img src="" alt="">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
 
 </html>
