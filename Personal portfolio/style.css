@@ -7,14 +7,17 @@
     --text-main: #333333;
     --text-muted: #555555;
     --text-light: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --heading-color: #0A3D62;
 }
 
 [data-theme="dark"] {
-    --background-light: #121820;
-    --card-bg: #1C2530;
-    --text-main: #E8ECEF;
-    --text-muted: #A9B4BD;
+    --background-light: #2A2A2A;
+    --card-bg: #3D3D3D;
+    --text-main: #F5F7F8;
+    --text-muted: #C3CBD1;
     --text-light: #FFFFFF;
+    --heading-color: #57D9C5;
 }
 
 body {
@@ -39,7 +42,7 @@ h2,
 h3,
 h4 {
     font-family: 'Poppins', sans-serif;
-    color: var(--primary-color);
+    color: var(--heading-color);
 }
 
 header {
@@ -78,23 +81,67 @@ nav h1 {
 }
 
 #themeToggle {
-    background: none;
-    border: 2px solid var(--secondaey-color);
-    color: var(--text-light);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-    flex-shrink: 0;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-#themeToggle:hover {
+.theme-switch {
+    display: inline-block;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.switch-track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 56px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid var(--secondary-color);
+    border-radius: 999px;
+    padding: 0 6px;
+    transition: background-color o.3s ease;
+}
+
+.switch-track i {
+    font-size: 0.75em;
+    color: var(--text-light);
+    z-index: 1;
+}
+
+.icon-sun {
+    margin-right: auto;
+}
+
+.icon-moon {
+    margin-left: auto;
+}
+
+.switch-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
     background-color: var(--secondary-color);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#themeToggle:checked~.switch-track .switch-thumb {
+    transform: translateX(28px);
+}
+
+#themeToggle:checked~.switch-track {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#themeToggle:focus-visible~.switch-track {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 #progressBar {
@@ -147,6 +194,62 @@ nav h1 {
     transform: translateY(-2px);
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: column;
+    grid-template-rows: repeat(4, auto);
+    gap: 0.9rem 2rem;
+    margin-top: 1rem;
+}
+
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 00.5rem;
+    background-color: #F8F9FA;
+    color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    padding: 0.6rem 1.1rem;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.skill-badge i {
+    color: var(--secondary-color);
+}
+
+.skill-badge:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+.skill-badge:hover i {
+    color: var(--text-light);
+}
+
+[data-theme="dark"] .skill-badge {
+    background-color: #2C313A;
+    color: var(--text-main);
+    border-color: var(--heading-color);
+}
+
+[dark-theme="dark"] .skill-badge i {
+    color: var(--heading-color);
+}
+
+[data-theme="dark"] .skill-badge:hover {
+    background-color: var(--heading-color);
+    color: #16181D;
+}
+
+[dark-theme="dark"] .skill-badge:hover i {
+    color: #16181D;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -174,7 +277,7 @@ main {
 }
 
 section {
-    background-color: var(--text-light);
+    background-color: var(--card-bg);
     padding: 2.5rem;
     border-radius: 8px;
     margin-bottom: 3rem;
@@ -196,12 +299,27 @@ section p {
 
 .education,
 .project {
-    background-color: #F8F9FA;
+    background-color: var(--card-bg);
     border-left: 5px solid var(--primary-color);
     padding: 2rem;
     border-radius: 4px;
     margin-bottom: 1.5rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education h3,
+.project h3 {
+    color: var(--heading-color);
+}
+
+.education p,
+.project p {
+    color: var(--text-muted);
+}
+
+.education ul,
+.education li {
+    color: var(--text-muted);
 }
 
 .education:hover,
