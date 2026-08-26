@@ -1,5 +1,4 @@
 const themeToggle = document.getElementById('themeToggle');
-const themeIcon = themeToggle.querySelector('i');
 
 function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
